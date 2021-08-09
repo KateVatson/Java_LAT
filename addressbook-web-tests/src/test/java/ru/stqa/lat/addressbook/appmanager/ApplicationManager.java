@@ -28,9 +28,6 @@ public class ApplicationManager {
     } else if (browser == BrowserType.IE) {
       wd = new InternetExplorerDriver();
     }
-    ChromeOptions handlingSSL = new ChromeOptions();
-    handlingSSL.setAcceptInsecureCerts(true);
-    wd = new ChromeDriver(handlingSSL);
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/");
     groupHelper = new GroupHelper(wd);
