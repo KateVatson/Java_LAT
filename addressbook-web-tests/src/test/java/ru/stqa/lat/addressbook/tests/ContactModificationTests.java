@@ -5,7 +5,7 @@ import ru.stqa.lat.addressbook.model.ContactData;
 
 public class ContactModificationTests extends TestBase{
 
-  @Test
+  @Test(enabled = false)
   public void testContactModification () {
     app.getContactHelper().editContact();
     app.getContactHelper().fillContactForm(new ContactData("Ivan", "Ivanovich", "Ivanov", "TestCase", "Test title", "Tieto", "Saint-Petersburg", "+7(900)543-12-09", "drugoytest@mail.ru", null), false);
